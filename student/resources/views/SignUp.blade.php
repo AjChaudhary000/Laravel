@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://codepen.io/skjha5993/pen/bXqWpR.css">
     <title>Student SignUp Form</title>
-    <<style>
+    <style>
     label {
     font-weight: 600;
     color: #555;
@@ -20,8 +20,8 @@ body {
 <body>
 
     <div class="container">
-        <form>
-            
+        <form action="/reg"  method="post"   >
+            @csrf
             <h2 class="text-center">Student SignUp Form</h2>
         <div class="row jumbotron">
             <div class="col-sm-6 form-group">
@@ -54,7 +54,7 @@ body {
             </div>
             <div class="col-sm-6 form-group">
                 <label for="Country">Country</label>
-                <select class="form-control custom-select browser-default">
+                <select value="Country" class="form-control custom-select browser-default">
                     <option value="Afghanistan">Afghanistan</option>
 <option value="Åland Islands">Åland Islands</option>
 <option value="Albania">Albania</option>
@@ -315,7 +315,7 @@ body {
             </div>
             <div class="col-sm-2 form-group">
                 <label for="cod">Country code</label>
-                <select class="form-control browser-default custom-select">
+                <select value ="Country_code" class="form-control browser-default custom-select">
                     <option data-countryCode="US" value="1" selected>USA (+1)</option>
   <option data-countryCode="GB" value="44">UK (+44)</option>
 

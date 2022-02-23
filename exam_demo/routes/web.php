@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentController;
-
+use App\Http\Controllers\StudUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +12,11 @@ use App\Http\Controllers\StudentController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('SignUp');
+    return view('welcome');
 });
-
-Route::Post('/reg',[StudentController::class,'RegData']);
+Route::get('/t',[StudUserController::class,'ShowData']);
+Route::post('/AddReg',[StudUserController::class,'Adduser']);
+Route::get('/UserData',[StudUserController::class,'ShowData']);
+Route::get('/deleteuser/{id}',[StudUserController::class,'deleteData']);
+Route::get('/edituser/{id}',[StudUserController::class,'editData']);
